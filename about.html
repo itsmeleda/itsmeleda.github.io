@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styleme2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html" class="active">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="hireme.html">HIRE ME</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="left-section">
+                <img src="images/imagesss.jpg" alt="Profile Picture">
+                <h2>Frontend dev/ Graphic Designer</h2>
+                <div class="options">
+                    <a href="#" onclick="toggleSection('about')"> <i class="fas fa-user"></i> About Me</a>
+                    <a href="#" onclick="toggleSection('skills')"> <i class="fas fa-cogs"></i> Skills</a>
+                    <a href="#" onclick="toggleSection('contact')"> <i class="fas fa-envelope"></i> Contact Information</a>
+                </div>
+                <a href="index.html" class="backto-home-btn">Back to Home</a>
+            </div>
+            <div class="right-section">
+                <div id="about" class="section active">
+                    <h1>About Me</h1>
+                <p>Hi there! My name is Leda and I am a graphic design enthusiast and a college student with a degree in computer science.
+                I have always been passionate about art and design, and I believe that graphic design is the perfect medium for me to express my creativity and imagination.</p>
+                <br>
+                <p>As a graphic designer, I enjoy working on various projects such as logos, branding, web design, and print media.
+                I am constantly seeking new challenges and opportunities to enhance my skills and knowledge in this field.
+                                
+                Apart from my passion for design, I have a strong background in computer science. 
+                I have always been fascinated by technology and its ability to improve our lives. 
+                My degree in computer science has given me a solid foundation in programming, data structures, algorithms, and software engineering.</p>
+                                
+                <br>              
+                <p>In my free time, I enjoy exploring new places, trying out new cuisines, and spending time with my family and friends. 
+                 also love to read books and watch movies, especially those that inspire me to think outside the box and challenge myself.
+                Overall, I am a driven and creative individual who is passionate about design and technology. 
+                I am excited to see where my skills and passion will take me in the future, and I am always open to new opportunities and challenges.</p>
+                </div>
+                <div id="skills" class="section">
+                    <h1>Skills</h1>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i>CSS and HTMl (frontend design)</li>
+                    
+                        <li><i class="fas fa-chevron-right"></i>Average knowledge in Canva and Photoshop </li>
+                
+                        <li><i class="fas fa-chevron-right"></i>Tshirt design using photoshop and Canva</li>
+                    
+                        <li><i class="fas fa-chevron-right"></i>Average editing skills in images and videos.</li>
+                  
+                        <li><i class="fas fa-chevron-right"></i>Highly responsive to a diverse range of clients need, specializing in
+                    supporting small business owners and solo entrepreneurs in the areas of
+                    customer service, marketing and social media. </li>
+                    
+                        <li> <i class="fas fa-chevron-right"></i>Managing filing systems, update records, and organize documentation.</li>
+                    
+                        <li><i class="fas fa-chevron-right"></i>Prepare and create PowerPoint presentations and materials as needed;
+                    research materials and sources for presentations.</li>
+                   
+                        <li><i class="fas fa-chevron-right"></i>Proficient computer skills, including Microsoft Office Suite ( Word,
+                    PowerPoint and Excel)</li>
+                    
+                    <li><i class="fas fa-chevron-right"></i>Experience with Google Docs, Drive, cloud services, and other technology tools.</li>
+                    
+                    <li><i class="fas fa-chevron-right"></i>Knowledgeable in technology to communicate via computer, smartphone, or
+                    text. </li>
+                    
+                    <li><i class="fas fa-chevron-right"></i>Organized multi-tasker who works well with fast-paced directions and
+                    instructions.</li>
+                    
+                    <li><i class="fas fa-chevron-right"></i>UI/UX Design</li>
+
+                </ul>
+        </div>
+              
+                <div id="contact" class="section">
+                    <h1>Contact Information</h1>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: ledassdee@gmail.com</li>
+                <li><i class="fas fa-phone"></i> Phone: +639-05216-7088</li>
+                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="#">linkedin.com/in/leda-grace-abella-a70377232</a></li>
+            </ul>
+            
+        </div>
+    </div>
+<footer>
+    <div class="footer-content">
+        <div class="social-icons2">
+            <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2023 No Copyright Infringement. All rights reserved.</p>
+    </div>
+    </div>
+</footer>
+<script>
+function toggleSection(sectionId) {
+    var sections = document.getElementsByClassName("section");
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+    }
+    document.getElementById(sectionId).style.display = "block";
+}
+
+var footer = document.querySelector("footer");
+var lastScrollPosition = window.pageYOffset;
+
+window.addEventListener("scroll", function() {
+    var currentScrollPosition = window.pageYOffset;
+
+    if (currentScrollPosition > lastScrollPosition) {
+        // Scrolling down
+        footer.style.display = "block";
+    } else {
+        // Scrolling up
+        footer.style.display = "none";
+    }
+
+    lastScrollPosition = currentScrollPosition;
+});
+
+
+</script>
+</body>
+</html>
